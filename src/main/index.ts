@@ -13,6 +13,8 @@ function createWindow(): void {
     y: 50,
     show: false,
     autoHideMenuBar: true,
+    frame: false,
+    transparent: true,
     alwaysOnTop: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -21,7 +23,7 @@ function createWindow(): void {
     }
   })
 
-  //   mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
