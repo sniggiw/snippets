@@ -23,7 +23,7 @@ export default function Search() {
           onChange={handleSearch}
         />
       </section>
-      <section className="text-center text-slate-600 text-xs mt-2">未见翁 / sniggiw</section>
+      <section className="text-center text-slate-600 text-xs mt-3">未见翁 / sniggiw</section>
     </main>
   )
 }
