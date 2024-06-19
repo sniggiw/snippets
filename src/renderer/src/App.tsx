@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Search from './components/Search'
 import Result from './components/Result'
 import { CodeContext } from './context/CodeContext'
-import { CodeType, codes } from './data'
+import { CodeType } from './data'
 
 function App(): JSX.Element {
   const [data, setData] = useState<CodeType[]>([])
