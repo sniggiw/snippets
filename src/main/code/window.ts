@@ -9,8 +9,9 @@ export function createWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 350,
-    x: width - 600,
-    y: 50,
+    // x: width - 600,
+    // y: 50,
+    center: true,
     show: false,
     autoHideMenuBar: true,
     frame: false,
