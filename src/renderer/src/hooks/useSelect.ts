@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import useCode from './useCode'
 
 export default () => {
-  const { data } = useCode()
+  const { data, setData } = useCode()
   const [id, setId] = useState(0)
   const handleKeyEvent = useCallback(
     (e: KeyboardEvent) => {
@@ -28,9 +28,10 @@ export default () => {
     [data, id]
   )
 
-  const handleSelectItem = (id: number) => {
+  const handleSelectItem = async (id: number) => {
     const content = data.find((item) => item.id === id)?.content
-    if (content) navigator.clipboard.writeText(content)
+    if (content) await navigator.clipboard.writeText(content)
+    setData([])
     window.api.hideWindow()
   }
 
