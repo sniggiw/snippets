@@ -1,17 +1,15 @@
-import { useState } from 'react'
 import Search from './components/Search'
 import Result from './components/Result'
-import { CodeContext } from './context/CodeContext'
-import { CodeType } from './data'
+import useShortCut from './hooks/useShortCut'
 
 function App(): JSX.Element {
-  const [data, setData] = useState<CodeType[]>([])
-
+  const { registerShortCut } = useShortCut()
+  registerShortCut('search', "CommandOrControl+shift+'")
   return (
-    <CodeContext.Provider value={{ data, setData }}>
+    <>
       <Search />
       <Result />
-    </CodeContext.Provider>
+    </>
   )
 }
 

@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
-import useCode from './useCode'
+import useStore from '@renderer/store/useStore'
 
 export default () => {
-  const { data, setData } = useCode()
+  const data = useStore((state) => state.data)
+  const setData = useStore((state) => state.setData)
+  const setSearch = useStore((state) => state.setSearch)
+
   const [id, setId] = useState(0)
   const handleKeyEvent = useCallback(
     (e: KeyboardEvent) => {
@@ -32,6 +35,7 @@ export default () => {
     const content = data.find((item) => item.id === id)?.content
     if (content) await navigator.clipboard.writeText(content)
     setData([])
+    setSearch('')
     window.api.hideWindow()
   }
 
