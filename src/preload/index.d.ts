@@ -5,7 +5,7 @@ declare global {
     electron: ElectronAPI
     api: {
       hideWindow: () => void
-      shortCut: (type: string, shortCut: string) => void
+      shortCut: (type: string, shortCut: string) => Promise<boolean>
     }
   }
 }
