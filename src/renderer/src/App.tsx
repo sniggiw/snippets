@@ -7,11 +7,11 @@ function App(): JSX.Element {
   const { registerShortCut } = useShortCut()
   registerShortCut('search', "CommandOrControl+shift+'")
   return (
-    <>
+    <main className="relative">
       <Error />
       <Search />
       <Result />
-    </>
+    </main>
   )
 }
 

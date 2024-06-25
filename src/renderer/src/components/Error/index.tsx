@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import useStore from '@renderer/store/useStore'
+import { Alert } from 'antd'
 
 export default function Error() {
   const error = useStore((state) => state.error)
@@ -11,5 +12,9 @@ export default function Error() {
   }, [error])
 
   if (!error) return null
-  return <div className={'bg-red-500 text-white'}>{error}</div>
+  return (
+    <main className="absolute top-0 w-full z-10">
+      <Alert message={error} type="info" showIcon />
+    </main>
+  )
 }
