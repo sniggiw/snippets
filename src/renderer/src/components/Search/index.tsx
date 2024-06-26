@@ -4,6 +4,7 @@ import { Input } from 'antd'
 
 export default function Search() {
   const { search, handleSearch } = useSearch()
+
   return (
     <main className="bg-slate-50 p-3 rounded-lg drag">
       <section className="bg-slate-200 p-3 rounded-lg flex items-center gap-1 nodrag">
@@ -15,11 +16,7 @@ export default function Search() {
           className="cursor-pointer"
           onClick={() => alert('显示配置页面')}
         />
-        <Input
-          value={search}
-          onChange={handleSearch}
-          autoFocus
-        />
+        <Input value={search} onChange={handleSearch} autoFocus />
       </section>
       <section className="text-center text-slate-600 text-xs mt-3">未见翁 / sniggiw</section>
     </main>
