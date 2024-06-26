@@ -11,6 +11,9 @@ const api = {
   //   }
   shortCut: (type: 'search', shortCut: string) => {
     return ipcRenderer.invoke('shortCut', type, shortCut)
+  },
+  setIgnoreMouseEvents: (isIgnore: boolean, option?: { forward: boolean }) => {
+    return ipcRenderer.send('setIgnoreMouseEvents', isIgnore, option)
   }
 }
 
