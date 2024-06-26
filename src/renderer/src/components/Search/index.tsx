@@ -1,5 +1,6 @@
 import useSearch from '@renderer/hooks/useSearch'
 import { SettingOne } from '@icon-park/react'
+import { Input } from 'antd'
 
 export default function Search() {
   const { search, handleSearch } = useSearch()
@@ -14,10 +15,10 @@ export default function Search() {
           className="cursor-pointer"
           onClick={() => alert('显示配置页面')}
         />
-        <input
-          className="w-full outline-none text-2xl text-slate-600 bg-slate-200"
+        <Input
           value={search}
           onChange={handleSearch}
+          autoFocus
         />
       </section>
       <section className="text-center text-slate-600 text-xs mt-3">未见翁 / sniggiw</section>
