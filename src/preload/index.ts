@@ -14,6 +14,10 @@ const api = {
   },
   setIgnoreMouseEvents: (isIgnore: boolean, option?: { forward: boolean }) => {
     return ipcRenderer.send('setIgnoreMouseEvents', isIgnore, option)
+  },
+
+  openConfigWindow: () => {
+    ipcRenderer.send('openConfigWindow')
   }
 }
 

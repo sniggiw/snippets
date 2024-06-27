@@ -7,6 +7,7 @@ declare global {
       hideWindow: () => void
       shortCut: (type: string, shortCut: string) => Promise<boolean>
       setIgnoreMouseEvents: (isIgnore: boolean, option?: { forward: boolean }) => void
+      openConfigWindow: () => void
     }
   }
 }
