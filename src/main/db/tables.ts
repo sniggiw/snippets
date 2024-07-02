@@ -13,7 +13,15 @@ db.exec(`
         id integer primary key autoincrement not null,
         title text not null,
         content text not null,
-        categore_id integer,
+        category_id integer,
         created_at text not null
     );
+`)
+
+db.exec(`
+    INSERT INTO categories (name, created_at) VALUES ('sniggiw', datetime());
+`)
+
+db.exec(`
+    INSERT INTO contents (title, content, category_id, created_at) VALUES ('react', 'zustand', 1, datetime());
 `)
