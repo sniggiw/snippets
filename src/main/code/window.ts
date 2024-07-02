@@ -33,7 +33,7 @@ export function createWindow(): BrowserWindow {
     return { action: 'deny' }
   })
 
-  // win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
