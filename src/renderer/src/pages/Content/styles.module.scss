@@ -1,0 +1,14 @@
+.content-page {
+  @apply h-screen text-xs text-slate-700;
+  display: grid;
+  grid-template: 'list snippet' auto / 150px auto;
+
+  .list {
+    @apply bg-slate-50 border-r;
+    grid-area: list;
+  }
+
+  .snippet {
+    grid-area: snippet;
+  }
+}

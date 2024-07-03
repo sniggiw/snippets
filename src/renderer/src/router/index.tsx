@@ -1,6 +1,8 @@
 import { createHashRouter } from 'react-router-dom'
 import Home from '@renderer/pages/Home'
 import Config from '@renderer/pages/Config'
+import Category from '@renderer/pages/Category'
+import Content from '@renderer/pages/Content'
 
 const router = createHashRouter([
   {
@@ -9,7 +11,19 @@ const router = createHashRouter([
   },
   {
     path: 'config',
-    element: <Config />
+    element: <Config />,
+    children: [
+      {
+        path: '',
+        element: <Category />,
+        children: [
+          {
+            index: true,
+            element: <Content />
+          }
+        ]
+      }
+    ]
   }
 ])
 

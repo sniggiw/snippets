@@ -1,5 +1,9 @@
-import styles from './index.module.scss'
+import { Outlet } from 'react-router-dom'
 
 export default function Config() {
-  return <main className={styles.main}>config</main>
+  return (
+    <main>
+      <Outlet />
+    </main>
+  )
 }

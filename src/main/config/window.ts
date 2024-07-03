@@ -9,7 +9,7 @@ export function createWindow(): BrowserWindow {
 
   const configWin = {
     width: 500,
-    height: 500
+    height: 350
   }
 
   const win = new BrowserWindow({
@@ -20,8 +20,8 @@ export function createWindow(): BrowserWindow {
     // center: true,
     show: false,
     autoHideMenuBar: true,
-    // frame: false,
-    // transparent: true,
+    frame: true,
+    transparent: false,
     alwaysOnTop: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
