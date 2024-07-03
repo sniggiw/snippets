@@ -8,8 +8,11 @@ import useIgnoreMouseEvents from '@renderer/hooks/useIgnoreMouseEvents'
 function Home(): JSX.Element {
   const mainRef = useRef<HTMLDivElement | null>(null)
   const { setIgnoreMouseEvents } = useIgnoreMouseEvents()
+
   useEffect(() => {
     setIgnoreMouseEvents(mainRef as MutableRefObject<HTMLElement>)
+
+    window.api.openConfigWindow()
   }, [])
 
   const { registerShortCut } = useShortCut()

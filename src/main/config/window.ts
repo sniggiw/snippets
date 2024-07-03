@@ -6,11 +6,17 @@ import url from 'node:url'
 
 export function createWindow(): BrowserWindow {
   const { width } = screen.getPrimaryDisplay().workAreaSize
+
+  const configWin = {
+    width: 1250,
+    height: 750
+  }
+
   const win = new BrowserWindow({
-    width: 1000,
-    height: 600,
-    x: width - 600,
-    y: 50,
+    width: configWin.width,
+    height: configWin.height,
+    x: width - configWin.width,
+    y: 0,
     // center: true,
     show: false,
     autoHideMenuBar: true,
@@ -33,7 +39,7 @@ export function createWindow(): BrowserWindow {
     return { action: 'deny' }
   })
 
-  // win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
