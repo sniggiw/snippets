@@ -10,7 +10,7 @@ export function createWindow(): BrowserWindow {
     width: 500,
     height: 350,
     x: width - 600,
-    y: 50,
+    y: 0,
     // center: true,
     show: false,
     autoHideMenuBar: true,

@@ -8,8 +8,8 @@ export function createWindow(): BrowserWindow {
   const { width } = screen.getPrimaryDisplay().workAreaSize
 
   const configWin = {
-    width: 1250,
-    height: 750
+    width: 500,
+    height: 500
   }
 
   const win = new BrowserWindow({
