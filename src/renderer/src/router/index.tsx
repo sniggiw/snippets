@@ -4,6 +4,8 @@ import Config from '@renderer/pages/Config'
 import Category from '@renderer/pages/Category'
 import Content from '@renderer/pages/Content'
 
+import categoryLoder from '@renderer/pages/Category/categoryLoder'
+
 const router = createHashRouter([
   {
     path: '/',
@@ -16,6 +18,7 @@ const router = createHashRouter([
       {
         path: '',
         element: <Category />,
+        loader: categoryLoder,
         children: [
           {
             index: true,
